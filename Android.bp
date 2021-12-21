@@ -1,0 +1,20 @@
+cc_library_static {
+    name: "libwuffs_mirror_release_c",
+    export_include_dirs: ["release/c"],
+    cflags: [
+        "-DWUFFS_IMPLEMENTATION",
+        "-DWUFFS_CONFIG__MODULES",
+        "-DWUFFS_CONFIG__MODULE__BASE",
+        "-DWUFFS_CONFIG__MODULE__GIF",
+        "-DWUFFS_CONFIG__MODULE__LZW",
+    ],
+    srcs: [
+        "release/c/wuffs-v0.3.c",
+    ],
+    host_supported: true,
+    target: {
+      windows: {
+        enabled: true,
+      },
+    },
+}
