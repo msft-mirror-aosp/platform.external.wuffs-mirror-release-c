@@ -28,6 +28,7 @@ cc_library_static {
     srcs: [
         "release/c/wuffs-v0.3.c",
     ],
+    sdk_version: "minimum",
     host_supported: true,
     target: {
       windows: {
